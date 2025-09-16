@@ -331,7 +331,7 @@ main .features {
 
 @media screen and (min-width: 768px) {
   .features-item {
-    width: calc((100% - 3 * 24px) / 2);
+    width: calc((100% - 24px) / 2);
   }
 }
 
@@ -414,6 +414,11 @@ main .features {
   padding-top: 96px;
 }
 
+.team .container {
+  padding-left: 108px;
+  padding-right: 108px;
+}
+
 .team {
   background-color: #f4f4fd;
 }
@@ -433,12 +438,15 @@ main .features {
 }
 
 .team-list {
-  text-align: center;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
   gap: 72px;
+}
+
+@media screen and (min-width: 768px) {
+  .team-list {
+    gap: 72px 24px;
+  }
 }
 
 .team-name {
@@ -467,6 +475,12 @@ main .features {
   /* shadow for the box li */
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+}
+
+@media screen and (min-width: 768px) {
+  .team-item {
+    width: calc((100% - 24px) / 2);
+  }
 }
 
 .team-socials-list {
@@ -515,7 +529,7 @@ main .features {
 }
 
 /* ===================PORTFOLIO=================== */
-main .portfolio {
+.main .portfolio {
   padding-top: 96px;
   padding-bottom: 96px;
 }
@@ -557,7 +571,7 @@ main .portfolio {
 
 .portfolio-item:hover .overlay {
   /* зміщення контенту на 0 */
-  transform: translateX(0);
+  transform: translateY(0);
 }
 
 .portfolio-title {
@@ -572,7 +586,6 @@ main .portfolio {
 
 .portfolio-img {
   width: 100%;
-  height: auto;
 }
 
 .portfolio-text-section {
@@ -580,8 +593,8 @@ main .portfolio {
   border-left: 1px solid #e7e9fc;
   border-right: 1px solid #e7e9fc;
   padding: 32px 16px;
-  width: 288px;
-  height: 120px;
+  min-width: 288px;
+  min-height: 120px;
 
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
@@ -608,13 +621,24 @@ main .portfolio {
 /* !For mobile */
 .portfolio-list {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-wrap: wrap;
   gap: 48px;
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio-list {
+    gap: 72px 24px;
+  }
 }
 
 .portfolio-item {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio-item {
+    width: calc((100% - 24px) / 2);
+  }
 }
 
 .portfolio-item:hover,
@@ -628,22 +652,31 @@ main .portfolio {
 
 footer {
   background-color: #2e2f42;
-  width: 100%;
   padding: 96px 0;
 }
 
-footer .container {
+.footer .container {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
   text-align: center;
+  gap: 72px;
+  justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .footer .container {
+    padding-right: 108px;
+    padding-left: 108px;
+    justify-content: start;
+    gap: 72px 24px;
+    align-items: baseline;
+  }
 }
 
 .logo-footer {
   font-weight: 700;
   font-size: 18px;
-  line-height: 1.16667;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
@@ -662,7 +695,12 @@ footer .container {
   max-width: 288px;
 
   margin-top: 16px;
-  margin-bottom: 72px;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-text {
+    max-width: 264px;
+  }
 }
 
 .footer-content-container {
@@ -674,6 +712,12 @@ footer .container {
   flex-direction: column;
   margin-right: 80px;
 } */
+
+@media screen and (min-width: 768px) {
+  .footer-content-container {
+    text-align: left;
+  }
+}
 
 .footer-social-title {
   font-weight: 500;
@@ -687,7 +731,6 @@ footer .container {
 .footer-social-list {
   display: flex;
   gap: 16px;
-  margin-bottom: 72px;
 }
 
 .footer-social-item {
@@ -730,12 +773,25 @@ footer .container {
   margin-bottom: 16px;
 }
 
+@media screen and (min-width: 768px) {
+  .footer-subscribe-title {
+    text-align: left;
+  }
+}
+
 .footer-subscribe-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-subscribe-form {
+    flex-direction: row;
+    gap: 24px;
+  }
 }
 
 .footer-subscribe-input {
