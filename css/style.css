@@ -245,6 +245,17 @@ main .hero {
   background-repeat: no-repeat;
 }
 
+@media (min-resolution: 192dpi) {
+  .hero {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero-bg-2x.jpg);
+  }
+}
+
 .hero-title {
   font-weight: 700;
   font-size: 36px;
@@ -415,8 +426,8 @@ main .features {
 }
 
 .team .container {
-  padding-left: 108px;
-  padding-right: 108px;
+  padding-left: 28px;
+  padding-right: 28px;
 }
 
 .team {
