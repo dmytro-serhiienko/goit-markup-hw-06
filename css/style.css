@@ -23,10 +23,6 @@ ul {
   list-style-type: none;
 }
 
-section {
-  padding: 120px 0;
-}
-
 img {
   display: block;
 }
@@ -69,15 +65,6 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-@media screen and (min-width: 768px) {
-  .container .header {
-    max-width: 768px;
-    margin: 0 auto;
-    /* padding-left: 16px;
-    padding-right: 16px; */
-  }
 }
 
 .logo-header {
@@ -225,6 +212,17 @@ button {
 /* #endregion */
 
 /* #region HERO */
+
+main .hero {
+  padding-top: 72px;
+  padding-bottom: 72px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .hero {
   background-color: #2e2f42;
   /* Gradient and image for hero section */
@@ -233,25 +231,22 @@ button {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/office-work.jpg);
+    url(../images/hero-bg-mob.jpg);
 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
-  width: 100%;
-  padding: 188px 0;
 }
 
 .hero-title {
   font-weight: 700;
-  font-size: 56px;
-  line-height: 1.07;
-  color: #ffffff;
-  text-align: center;
+  font-size: 36px;
+  line-height: 1.11111;
   letter-spacing: 0.02em;
-  max-width: 496px;
-  margin: 0 auto 48px;
+  text-align: center;
+  color: #fff;
+  max-width: 216px;
+  margin-bottom: 72px;
 }
 
 .hero-btn {
@@ -295,19 +290,46 @@ button {
   overflow: hidden;
 }
 
-.features-list {
+/* ===============FEATURES=============== */
+
+main .features {
+  margin-top: 96px;
+  margin-bottom: 96px;
+}
+
+/* ?для компа */
+/* .features-list {
   display: flex;
   text-align: left;
   gap: 24px;
+} */
+
+/* ? для компа */
+/* .features-item {
+  flex-basis: calc((100% - 72px) / 4);
+} */
+
+.features-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 72px;
 }
 
-.features-item {
-  flex-basis: calc((100% - 72px) / 4);
+/* !Стили для мобілки */
+.features-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11111;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #2e2f42;
+  margin-bottom: 8px;
 }
 
 /* style for naming of section Features, Portfolio */
-.features-title,
-.portfolio-name,
+/* 
 .team-name {
   font-weight: 500;
   font-size: 20px;
@@ -315,18 +337,25 @@ button {
   color: #2e2f42;
   letter-spacing: 0.02em;
   margin-bottom: 8px;
+} */
+
+.features-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #434455;
 }
 
 /* styles for <p> of section Features, Team and Portfolio */
-.features-text,
-.team-position,
-.portfolio-dsr {
+/* .team-position,
+
   color: #434455;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-}
+} */
 
 .features-container {
   border: 1px solid #8e8f99;
@@ -338,35 +367,62 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  /* !виключив для моб !!! */
+  display: none;
 }
 
-/* SECTION TEAM */
+/* ===================TEAM=================== */
+.main .team {
+  padding-bottom: 96px;
+  padding-top: 96px;
+}
+
 .team {
   background-color: #f4f4fd;
-  display: flex;
 }
 
 .team-container {
   padding: 32px 0;
 }
 
-.team-list {
-  text-align: center;
-  display: flex;
-  gap: 24px;
-}
-
-/* стилі title для section Team and Portfolio */
-.team-title,
-.portfolio-title {
+.team-title {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
-  color: #2e2f42;
-  text-align: center;
   letter-spacing: 0.02em;
-  text-transform: capitalize;
+  text-align: center;
+  color: #2e2f42;
   margin-bottom: 72px;
+}
+
+.team-list {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 72px;
+}
+
+.team-name {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #2e2f42;
+  margin-bottom: 8px;
+}
+
+.team-position {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #434455;
+  margin-bottom: 8px;
 }
 
 .team-item {
@@ -378,7 +434,6 @@ button {
 }
 
 .team-socials-list {
-  margin-top: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -392,6 +447,11 @@ button {
 
 .team-socials-icon {
   fill: #f4f4fd;
+}
+
+.team-member-img {
+  width: 100%;
+  height: auto;
 }
 
 .team-link {
@@ -416,6 +476,15 @@ button {
 
 .team-link:focus {
   background-color: #404bbf;
+}
+
+/* ===================PORTFOLIO=================== */
+main .portfolio {
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+
+.portfolio .container {
 }
 
 /* контейнер для overlay */
@@ -455,9 +524,19 @@ button {
   transform: translateX(0);
 }
 
-/* PORTFOLIO SECTION */
+.portfolio-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11111;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #2e2f42;
+  margin-bottom: 72px;
+}
+
 .portfolio-img {
-  padding: 0 auto;
+  width: 100%;
+  height: auto;
 }
 
 .portfolio-text-section {
@@ -465,16 +544,37 @@ button {
   border-left: 1px solid #e7e9fc;
   border-right: 1px solid #e7e9fc;
   padding: 32px 16px;
-  width: 360px;
+  width: 288px;
   height: 120px;
+
+  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 
+/* !for mobile */
+.portfolio-name {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+  margin-bottom: 8px;
+}
+
+.portfolio-dsr {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #434455;
+}
+
+/* !For mobile */
 .portfolio-list {
   display: flex;
-  gap: 24px;
-  flex-wrap: wrap;
-  row-gap: 48px;
-  margin-bottom: 0;
+  flex-direction: column;
+  justify-content: center;
+  gap: 48px;
 }
 
 .portfolio-item {
@@ -488,53 +588,56 @@ button {
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 
-/* #endregion */
-/* #region Footer */
+/* ===================FOOTER=================== */
+
 footer {
   background-color: #2e2f42;
   width: 100%;
-  padding: 100px 0;
-}
-.logo-footer {
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 1.17;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #4d5ae5;
-  letter-spacing: 0.03em;
-  display: inline-block;
-  margin-bottom: 16px;
+  padding: 96px 0;
 }
 
-.logo-text-part-web-footer {
-  color: #f4f4fd;
+footer .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.logo-footer {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.16667;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #4d5ae5;
+
+  &.logo-footer span {
+    color: #f4f4fd;
+  }
 }
 
 .footer-text {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
-  color: #f4f4fd;
   letter-spacing: 0.02em;
-  max-width: 264px;
-}
+  color: #f4f4fd;
+  max-width: 288px;
 
-.footer .container {
-  display: flex;
-  align-items: baseline;
+  margin-top: 16px;
+  margin-bottom: 72px;
 }
 
 .footer-content-container {
-  margin-right: 120px;
+  /* margin-right: 120px; */
 }
 
-.footer-social-container {
+/* .footer-social-container {
   display: flex;
   flex-direction: column;
   margin-right: 80px;
-}
+} */
 
 .footer-social-title {
   font-weight: 500;
@@ -548,6 +651,7 @@ footer {
 .footer-social-list {
   display: flex;
   gap: 16px;
+  margin-bottom: 72px;
 }
 
 .footer-social-item {
@@ -592,6 +696,9 @@ footer {
 
 .footer-subscribe-form {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 24px;
 }
 
