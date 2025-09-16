@@ -223,6 +223,13 @@ main .hero {
   justify-content: center;
 }
 
+@media screen and (min-width: 768px) {
+  main .hero {
+    padding-top: 112px;
+    padding-bottom: 112px;
+  }
+}
+
 .hero {
   background-color: #2e2f42;
   /* Gradient and image for hero section */
@@ -247,6 +254,19 @@ main .hero {
   color: #fff;
   max-width: 216px;
   margin-bottom: 72px;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-title {
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 1.07143;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #fff;
+    max-width: 496px;
+    margin-bottom: 36px;
+  }
 }
 
 .hero-btn {
@@ -293,8 +313,8 @@ main .hero {
 /* ===============FEATURES=============== */
 
 main .features {
-  margin-top: 96px;
-  margin-bottom: 96px;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
 /* ?для компа */
@@ -309,23 +329,39 @@ main .features {
   flex-basis: calc((100% - 72px) / 4);
 } */
 
+@media screen and (min-width: 768px) {
+  .features-item {
+    width: calc((100% - 3 * 24px) / 2);
+  }
+}
+
 .features-list {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
   gap: 72px;
+}
+
+@media screen and (min-width: 768px) {
+  .features-list {
+    gap: 72px 24px;
+  }
 }
 
 /* !Стили для мобілки */
 .features-title {
   font-weight: 700;
   font-size: 36px;
-  line-height: 1.11111;
+  line-height: 1.11;
   letter-spacing: 0.02em;
   text-align: center;
   color: #2e2f42;
   margin-bottom: 8px;
+}
+
+@media screen and (min-width: 768px) {
+  .features-title {
+    text-align: left;
+  }
 }
 
 /* style for naming of section Features, Portfolio */
