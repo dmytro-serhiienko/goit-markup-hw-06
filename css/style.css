@@ -453,6 +453,17 @@ button {
   }
 }
 
+@media (min-resolution: 192dpi) {
+  .hero {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero-bg-2x.jpg);
+  }
+}
+
 /* !=========FEATURES SECTION ======*/
 
 .visually-hidden {
@@ -720,7 +731,7 @@ button {
   }
 
   .product-list-item {
-    width: calc((100% - 72px) / 2);
+    width: calc((100% - 24px) / 2);
   }
 }
 
@@ -823,7 +834,6 @@ button {
   letter-spacing: 0.02em;
   color: #ffffff;
   margin-bottom: 16px;
-  text-align: center;
 }
 
 .footer-subscribe-form {
@@ -912,8 +922,7 @@ button {
   .footer .container {
     flex-wrap: nowrap;
     gap: 0;
-    padding-left: 0;
-    padding-right: 0;
+    padding: 0 15px;
   }
 
   .footer-text-box {
