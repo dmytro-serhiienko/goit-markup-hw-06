@@ -177,7 +177,7 @@ button {
     &:hover,
     &:focus {
       color: #404bbf;
-      transform: scale(1.05);
+      transform: scale(1.05) translateY(-2px);
     }
   }
 
@@ -203,7 +203,7 @@ button {
     &:hover,
     &:focus {
       color: #404bbf;
-      transform: scale(1.05);
+      transform: scale(1.05) translateY(-2px);
     }
   }
 
@@ -450,7 +450,7 @@ button {
 
     &:hover,
     &:focus {
-      transform: scale(1.05);
+      transform: scale(1.05) translateY(-2px);
       background-color: #404bbf;
     }
   }
