@@ -96,7 +96,6 @@ button {
 }
 
 /* ===========HEADER======== */
-
 .header {
   border-bottom: 1px solid #e7e9fc;
   box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08),
@@ -173,11 +172,13 @@ button {
     color: #434455;
     padding: 24px 0;
     display: inline-block;
-  }
+    transition: all 350ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  .header-menu-link:hover,
-  .header-menu-link:focus {
-    color: #404bbf;
+    &:hover,
+    &:focus {
+      color: #404bbf;
+      transform: scale(1.05);
+    }
   }
 
   .header-address {
@@ -197,12 +198,13 @@ button {
     line-height: 1.17;
     letter-spacing: 0.04em;
     color: #434455;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
+    transition: all 350ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  .header-address-link:hover,
-  .header-address-link:focus {
-    color: #404bbf;
+    &:hover,
+    &:focus {
+      color: #404bbf;
+      transform: scale(1.05);
+    }
   }
 
   .current {
@@ -243,7 +245,6 @@ button {
 }
 
 /* ====MOBILE MENU====== */
-
 .mob-menu {
   background-color: #ffffff;
   position: fixed;
@@ -300,8 +301,7 @@ button {
   flex-direction: column;
   gap: 40px;
 }
-.mob-nav-item {
-}
+
 .mob-nav-link {
   font-weight: 700;
   font-size: 36px;
@@ -322,8 +322,7 @@ button {
   flex-direction: column;
   gap: 24px;
 }
-.mob-contacts-item {
-}
+
 .mob-contacts-link {
   font-weight: 500;
   font-size: 20px;
@@ -362,7 +361,6 @@ button {
 }
 
 /* !========HERO SECTION =======*/
-
 .hero {
   padding-top: 72px;
   padding-bottom: 72px;
@@ -448,12 +446,13 @@ button {
   }
 
   .hero-btn {
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
+    transition: all 350ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  .hero-btn:hover,
-  .hero-btn:focus {
-    background-color: #404bbf;
+    &:hover,
+    &:focus {
+      transform: scale(1.05);
+      background-color: #404bbf;
+    }
   }
 }
 
@@ -489,8 +488,15 @@ button {
   flex-wrap: wrap;
   gap: 72px;
 }
+
 .features-list-item {
   width: 100%;
+  transition: all 350ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    transform: translateY(-5px) scale(1.02);
+  }
 }
 
 .features-icon {
@@ -663,13 +669,14 @@ button {
   }
 
   .socials-list-link {
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 350ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .team-section .socials-list-link:hover,
   .team-section .socials-list-link:focus,
   .team-section .socials-list-link:active {
     background-color: #404bbf;
+    transform: scale(0.95);
   }
 }
 
@@ -755,8 +762,8 @@ button {
   }
 
   .product-list-item:hover {
-    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
-      0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+    /* box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+      0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08); */
   }
 
   .product-card-text {
@@ -947,16 +954,17 @@ button {
   .footer .socials-list-link:focus,
   .footer .socials-list-link:active {
     background-color: #31d0aa;
+    transform: scale(0.95);
   }
 
   .footer-subscribe-btn {
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
+    transition: all 350ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  .footer-subscribe-btn:hover,
-  .footer-subscribe-btn:focus,
-  .footer-subscribe-btn:active {
-    background-color: #404bbf;
+    &:hover,
+    &:focus,
+    &:active {
+      transform: scale(1.02);
+    }
   }
 }
 
